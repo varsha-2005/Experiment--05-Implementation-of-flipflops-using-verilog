@@ -141,15 +141,15 @@ end
 endmodule
 
 iii)  JK Flip-Flop:
-module jk(j,k,clk,q,qbar);
+module jkflipflop(j,k,clk,q,qbar);
 input j,k,clk;
-output reg q;
-output reg qbar;
+output q,qbar;
+reg q,qbar;
 always @(posedge clk)
-begin
-   q=(j&(~q))|((~k)&q);
-   qbar=((~j)&q)|(k &(~q));
-end 
+begin 
+q<=(j&~q)|(~k&q);
+qbar<=~q;
+end
 endmodule
 
 iv)  T Flip-Flop:
@@ -169,38 +169,45 @@ endmodule
 ### RTL LOGIC FOR FLIPFLOPS 
 1.SR FLIP-FLOP:
 
-![243328396-2e6ec9a9-9970-47b5-811e-1722a2acdf56](https://github.com/MavillaPranathi/Experiment--05-Implementation-of-flipflops-using-verilog/assets/118343610/9004644e-3798-4d76-a73a-857278f5bbcb)
+![image](https://github.com/varsha-2005/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119288183/78c3c0be-e13e-4531-9a89-d6b9adaffa84)
+
 
 2.D FLIP-FLOP:
 
-![243329209-bbcab139-1e4a-4188-ba5c-12359d464f82-1](https://github.com/MavillaPranathi/Experiment--05-Implementation-of-flipflops-using-verilog/assets/118343610/773f8ae2-d3ce-4648-8456-1067fde9a692)
+![image](https://github.com/varsha-2005/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119288183/761001c7-802e-4797-90e4-f18fc455a0b5)
+
 
 
 3.JK FLIP-FLOP:
 
-![243329259-ed7a8585-69f2-4cac-a24f-1ce2c4e55b2e](https://github.com/MavillaPranathi/Experiment--05-Implementation-of-flipflops-using-verilog/assets/118343610/3fb9964c-62b0-4eea-aa0b-f21e581f3aa9)
+![image](https://github.com/varsha-2005/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119288183/01d1ab58-75b4-4ec4-a1b9-0fd5663a61ca)
+
 
 4.T FLIP-FLOP:
 
-![243328450-122441fb-db4e-401c-87b0-41b05c501e43](https://github.com/MavillaPranathi/Experiment--05-Implementation-of-flipflops-using-verilog/assets/118343610/2d19fb78-b226-45cd-af98-0a66dd7c3cf2)
+![image](https://github.com/varsha-2005/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119288183/ef2ed35f-9975-4a90-97d1-ad496050db87)
 
 
 ### TIMING DIGRAMS FOR FLIP FLOPS 
 1.SR FLIP-FLOP:
 
-![243328419-b3490dd5-11ca-40d1-8d8d-4f71a57eba88](https://github.com/MavillaPranathi/Experiment--05-Implementation-of-flipflops-using-verilog/assets/118343610/ea92aaba-3351-4317-9135-b89adc9898e1)
+![image](https://github.com/varsha-2005/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119288183/ccd9b9c1-3b7a-4940-be53-dca21fd99e88)
+
 
 2.D FLIP-FLOP:
 
-![243328865-17a87174-4cb0-47c1-99bd-1284a1383a1b](https://github.com/MavillaPranathi/Experiment--05-Implementation-of-flipflops-using-verilog/assets/118343610/d8881830-1500-4cef-a9e1-01aa88c70460)
+![image](https://github.com/varsha-2005/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119288183/cbec3ed7-0319-4f38-8aaa-f09c99a1df15)
+
 
 3.JK FLIP-FLOP:
 
-![243328726-663f22cc-405e-48eb-8efe-2e3e3b6c69d8](https://github.com/MavillaPranathi/Experiment--05-Implementation-of-flipflops-using-verilog/assets/118343610/544a3363-bbf1-48f9-a868-db71fcd559f1)
+![image](https://github.com/varsha-2005/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119288183/62c42225-6214-4e0c-ad06-8f157a2c7c2a)
+
 
 4.T FLIP-FLOP:
 
-![243328476-b2b6bb77-cbf5-4aa9-b95e-846bc52c6e76](https://github.com/MavillaPranathi/Experiment--05-Implementation-of-flipflops-using-verilog/assets/118343610/d522f2e8-2d57-4b5e-8fc8-ab57bc7bd60e)
+![image](https://github.com/varsha-2005/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119288183/33a00597-bbdc-48bd-9738-38d3c563170c)
+
 
 ### RESULTS 
 Thus ,all the flipflops using verilog and validating their functionality using their functional tables are successfully executed.
